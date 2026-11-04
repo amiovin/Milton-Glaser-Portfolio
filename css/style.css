@@ -1,0 +1,978 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+.scroll-slide-right {
+  animation: slideIn linear both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%; 
+}
+
+.scroll-slide-left {
+  animation: slideInRight linear both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%; 
+}
+
+.scroll-slide-up {
+  animation: slideUp linear both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%; 
+}
+
+.index-body {
+    background-image: url('../images/bob_dylan.jpg');
+    background: linear-gradient(rgba(74, 73, 73, 0.5), rgba(74, 73, 73, 0.5)),
+        url('../images/bob_dylan.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: rgb(38, 132, 129);
+    background-size: 200%;
+    background-position: 60% 8%;
+}
+
+.bowlby-one-regular {
+    font-family: "Bowlby One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.bree-serif-regular {
+    font-family: "Bree Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    font-family: "Bowlby One", serif;
+    font-size: 30px;
+}
+
+.home-nav-bar {
+    list-style: none;
+    background-color: rgb(38, 132, 129);
+    display: flex;
+    justify-content: center;
+}
+
+.bio-nav-bar {
+    list-style: none;
+    background-color: rgb(201, 91, 118);
+    display: flex;
+    justify-content: center;
+}
+
+.works-nav-bar {
+    list-style: none;
+    background-color: rgb(238, 133, 50);
+    display: flex;
+    justify-content: center;
+}
+
+.influences-nav-bar {
+    list-style: none;
+    background-color: rgb(28, 104, 179);
+    display: flex;
+    justify-content: center;
+}
+
+.career-nav-bar {
+    list-style: none;
+    background-color: rgb(117, 65, 127);
+    display: flex;
+    justify-content: center;
+}
+
+.achievements-nav-bar {
+    list-style: none;
+    background-color: rgb(0, 94, 52);
+    display: flex;
+    justify-content: center;
+}
+
+ul li {
+    display: block;
+    padding: 20px 20px;
+}
+
+a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a.index-home:hover {
+  color: rgb(38, 132, 129);
+  -webkit-text-stroke: 1.5px #fefefe; 
+}
+
+a.bio-home:hover {
+    color:rgb(201, 91, 118);
+    -webkit-text-stroke: 1.5px #fefefe; 
+}
+
+a.works-home:hover {
+    color:rgb(238, 133, 50);
+    -webkit-text-stroke: 1.5px #fefefe;
+}
+
+a.influences-home:hover {
+    color:rgb(28, 104, 179);
+    -webkit-text-stroke: 1.5px #fefefe;
+}
+
+a.career-home:hover {
+    color:rgb(117, 65, 127);
+    -webkit-text-stroke: 1.5px #fefefe;
+}
+
+a.achievements-home:hover {
+    color:rgb(0, 94, 52);
+    -webkit-text-stroke: 1.5px #fefefe;
+}
+
+h1 {
+    font-size: 180px;
+    font-family: "Bowlby One", serif;
+    text-align: center;
+    position: relative;
+    top: 150px;
+    color: rgb(255, 255, 255);
+    line-height: 94.1%;
+    text-shadow:
+        10px 10px 0 rgb(38, 132, 129),
+        -10px 10px 0 rgb(38, 132, 129),
+        -10px -10px 0 rgb(38, 132, 129),
+        10px -10px 0 rgb(38, 132, 129);
+}
+
+.milton-glaser {
+    position: relative;
+    left: 360px;
+    top: 200px;
+    width: 1000px;
+    height: auto;
+}
+
+.intro-quote {
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    position: relative;
+    text-align: center;
+    left: 10px;
+    top: 160px;
+    font-family: "Bree Serif", serif;
+}
+
+footer {
+    background-color: rgb(38, 132, 129);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    position: relative;
+    padding: 10px;
+    width: 100%;
+    top: 190px;
+    bottom: 0;
+    font-family: "Bowlby One", serif;
+    font-size: 16px;
+
+    a:link {
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+    }
+
+    a:visited {
+        color: rgb(255, 255, 255);
+    }
+}
+
+/* biography section */
+
+.bio-body {
+    background-image: url('../images/bob_dylan.jpg');
+    background: linear-gradient(rgba(74, 73, 73, 0.5), rgba(74, 73, 73, 0.5)),
+        url('../images/bob_dylan.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: rgb(38, 132, 129);
+    background-size: 200%;
+    background-position: 60% 8%;
+}
+
+h2 {
+    font-size: 150px;
+    font-family: "Bowlby One", serif;
+    text-align: center;
+    position: relative;
+    top: 80px;
+    color: white;
+    text-shadow:
+        10px 10px 0 rgb(201, 91, 118),
+        -10px 10px 0 rgb(201, 91, 118),
+        -10px -10px 0 rgb(201, 91, 118),
+        10px -10px 0 rgb(201, 91, 118);
+}
+
+.rectangle1 {
+    position: relative;
+    left: 170px;
+    width: 1350px;
+    height: 2300px;
+    background-color: rgb(201, 91, 118);
+    display: inline-block;
+    z-index: -1;
+}
+
+.bio-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.family-bio-image {
+    position: relative;
+    top: 150px;
+    left:-20px;
+    width: 790px;
+    height: auto;
+}
+
+.reveal {
+  animation: fadeIn ease 2.5s;
+}
+
+.family-bio-para {
+    font-size: 25px;
+    font-family: "Bree Serif", serif;
+    color: rgb(255, 255, 255);
+    position: relative;
+    text-align: right;
+    top: 160px;
+    width: 600px;
+    line-height: 180%;
+}
+
+.cooper-union-para {
+    font-size: 25px;
+    font-family: "Bree Serif", serif;
+    color: rgb(255, 255, 255);
+    position: relative;
+    top: 170px;
+    line-height: 180%;
+    grid-column: 2/3;
+}
+
+.cooper-union-image {
+    position: relative;
+    top: 100px;
+    left: -70px;
+    width: 700px;
+    height: auto;
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+.glaser-seated-para {
+    font-size: 25px;
+    font-family: "Bree Serif", serif;
+    color: rgb(255, 255, 255);
+    position: relative;
+    text-align: right;
+    left: -80px;
+    top: 50px;
+    line-height: 180%;
+}
+
+.glaser-seated-image {
+    position: relative;
+    width: 650px;
+    height: auto;
+}
+
+.bio-footer {
+    background-color: rgb(201, 91, 118);
+    color: rgb(255, 255, 255);
+    top: -50px;
+    text-align: center;
+    position: relative;
+    width: 100%;
+
+    a:link {
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+    }
+
+    a:visited {
+        color: rgb(255, 255, 255);
+    }
+}
+
+/* works section */
+
+.works-body {
+    background-image: url('../images/bob_dylan.jpg');
+    background: linear-gradient(rgba(74, 73, 73, 0.5), rgba(74, 73, 73, 0.5)),
+        url('../images/bob_dylan.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: rgb(38, 132, 129);
+    background-size: 200%;
+    background-position: 60% 8%;
+}
+
+.works-title {
+    font-size: 150px;
+    font-family: "Bowlby One", serif;
+    text-align: center;
+    position: relative;
+    top: 100px;
+    color: white;
+    text-shadow:
+        10px 10px 0 rgb(238, 133, 50),
+        -10px 10px 0 rgb(238, 133, 50),
+        -10px -10px 0 rgb(238, 133, 50),
+        10px -10px 0 rgb(238, 133, 50);
+}
+
+.rectangle2 {
+    position: absolute;
+    top: 250px;
+    left: 150px;
+    width: 1350px;
+    height: 3700px;
+    background-color: rgb(238, 133, 50);
+    display: inline-block;
+    z-index: -1;
+}
+
+.works-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.greatest_hits_para {
+    font-size: 25px;
+    font-family: "Bree Serif", serif;
+    color: rgb(255, 255, 255);
+    position: relative;
+    text-align: left;
+    top: 300px;
+    left: 700px;
+    line-height: 180%;
+}
+
+.greatest-hits {
+    position: relative;
+    top: 150px;
+    left: -500px;
+    width: 400px;
+    height: auto;
+}
+
+.i_heart_ny_para {
+    font-size: 25px;
+    font-family: "Bree Serif", serif;
+    color: rgb(255, 255, 255);
+    position: relative;
+    text-align: right;
+    top: 200px;
+    left: -100px;
+    line-height: 180%;
+}
+
+.i_heart_ny {
+    position: relative;
+    top: 200px;
+    width: 460px;
+    height: auto;
+}
+
+.i_heart_ny_more_than_ever {
+    position: relative;
+    top: -200px;
+    left: 685px;
+    width: 225px;
+    height: auto;
+}
+
+.i_heart_ny_crayon {
+    position: relative;
+    top: -200px;
+    left: 250px;
+    width: 455px;
+    height: auto;
+}
+
+.brewing_para {
+    font-size: 25px;
+    font-family: "Bree Serif", serif;
+    color: rgb(255, 255, 255);
+    position: relative;
+    text-align: left;
+    top: -60px;
+    left: 720px;
+    line-height: 180%;
+}
+
+.brooklyn_brewing_logo {
+    position: relative;
+    top: -150px;
+    left: -800px;
+    width: 500px;
+    height: auto;
+}
+
+.brooklyn_brewery_sketch {
+    position: relative;
+    top: -590px;
+    left: 400px;
+    width: 280px;
+    height: auto;
+}
+
+.babyteeth_para {
+    font-size: 25px;
+    font-family: "Bree Serif", serif;
+    color: rgb(255, 255, 255);
+    position: relative;
+    text-align: right;
+    top: 100px;
+    left: -820px;
+    line-height: 180%;
+}
+
+.babyteeth {
+    position: relative;
+    top: -500px;
+    left: 600px;
+    width: 550px;
+    height: auto;
+}
+
+.babyteeth_inspo {
+    position: relative;
+    top: -100px;
+    left: 60px;
+    width: 550px;
+    height: auto;
+}
+
+.aretha_para {
+    font-size: 25px;
+    font-family: "Bree Serif", serif;
+    color: rgb(255, 255, 255);
+    position: relative;
+    text-align: left;
+    top: -60px;
+    left: 700px;
+    line-height: 180%;
+}
+
+.aretha {
+    position: relative;
+    top: -200px;
+    left: -600px;
+    width: 550px;
+    height: auto;
+}
+
+.works-footer {
+    background-color: rgb(238, 133, 50);
+    color: rgb(255, 255, 255);
+    position: relative;
+    text-align: center;
+    top: 3700px;
+    position: relative;
+    width: 100%;
+
+    a:link {
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+    }
+
+    a:visited {
+        color: rgb(255, 255, 255);
+    }
+}
+
+/* influences section */
+
+.influences-body {
+    background-image: url('../images/bob_dylan.jpg');
+    background: linear-gradient(rgba(74, 73, 73, 0.5), rgba(74, 73, 73, 0.5)),
+        url('../images/bob_dylan.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: rgb(38, 132, 129);
+    background-size: 200%;
+    background-position: 60% 8%;
+}
+
+.influences-title {
+    font-size: 150px;
+    font-family: "Bowlby One", serif;
+    text-align: center;
+    position: relative;
+    top: 100px;
+    color: white;
+    text-shadow:
+        10px 10px 0 rgb(28, 104, 179),
+        -10px 10px 0 rgb(28, 104, 179),
+        -10px -10px 0 rgb(28, 104, 179),
+        10px -10px 0 rgb(28, 104, 179);
+}
+
+.rectangle3 {
+    position: absolute;
+    top: 250px;
+    left: 200px;
+    width: 1350px;
+    height: 2200px;
+    background-color: rgb(28, 104, 179);
+    display: inline-block;
+    z-index: -1;
+}
+
+.influences-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.morandi_para {
+    font-size: 25px;
+    font-family: "Bree Serif", serif;
+    color: rgb(255, 255, 255);
+    position: relative;
+    text-align: right;
+    top: 200px;
+    left: 20px;
+    line-height: 180%;
+}
+
+.morandi {
+    position: relative;
+    top: 100px;
+    left: 80px;
+    width: 450px;
+    height: auto;
+}
+
+.duchamp_para {
+    font-size: 25px;
+    font-family: "Bree Serif", serif;
+    color: rgb(255, 255, 255);
+    position: relative;
+    text-align: left;
+    top: 300px;
+    left: 760px;
+    line-height: 180%;
+}
+
+.duchamp_profile {
+    position: relative;
+    top: 200px;
+    left: -400px;
+    width: 350px;
+    height: auto;
+}
+
+.bob_dylan {
+    position: relative;
+    top: -400px;
+    left: -100px;
+    width: 350px;
+    height: auto;
+}
+
+.olivetti_para {
+    font-size: 25px;
+    font-family: "Bree Serif", serif;
+    color: rgb(255, 255, 255);
+    position: relative;
+    text-align: right;
+    top: 450px;
+    left: -820px;
+    line-height: 180%;
+}
+
+.olivetti {
+    position: relative;
+    top: -150px;
+    left: 600px;
+    width: 250px;
+    height: auto;
+}
+
+.glaser_inspo {
+    position: relative;
+    top: 230px;
+    left: -85px;
+    width: 350px;
+    height: auto;
+}
+
+.mahalia_jackson {
+    position: relative;
+    top: -640px;
+    left: 870px;
+    width: 300px;
+    height: auto;
+}
+
+.influences-footer {
+    background-color: rgb(28, 104, 179);
+    color: rgb(255, 255, 255);
+    position: relative;
+    top: 2200px;
+    text-align: center;
+    position: relative;
+    width: 100%;
+
+    a:link {
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+    }
+
+    a:visited {
+        color: rgb(255, 255, 255);
+    }
+}
+
+/* career section */
+
+.career-title {
+    font-size: 150px;
+    font-family: "Bowlby One", serif;
+    text-align: center;
+    position: relative;
+    top: 100px;
+    color: white;
+    text-shadow:
+        10px 10px 0 rgb(117, 65, 127),
+        -10px 10px 0 rgb(117, 65, 127),
+        -10px -10px 0 rgb(117, 65, 127),
+        10px -10px 0 rgb(117, 65, 127);
+}
+
+.career_body {
+    background-image: url('../images/bob_dylan.jpg');
+    background: linear-gradient(rgba(74, 73, 73, 0.5), rgba(74, 73, 73, 0.5)),
+        url('../images/bob_dylan.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: rgb(38, 132, 129);
+    background-size: 200%;
+    background-position: 60% 8%;
+}
+
+.rectangle4 {
+    position: absolute;
+    top: 250px;
+    left: 150px;
+    width: 1350px;
+    height: 2500px;
+    background-color: rgb(117, 65, 127);
+    display: inline-block;
+    z-index: -1;
+}
+
+.career-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.pushpin_para {
+    font-size: 25px;
+    font-family: "Bree Serif", serif;
+    color: rgb(255, 255, 255);
+    position: relative;
+    text-align: right;
+    top: 100px;
+    left: 20px;
+    line-height: 180%;
+}
+
+.pushpin_studio {
+    position: relative;
+    top: 150px;
+    left: 85px;
+    width: 750px;
+    height: auto;
+}
+
+.pushpin_work_1 {
+    position: relative;
+    top: -150px;
+    left: 120px;
+    width: 300px;
+    height: auto;
+}
+
+.pushpin_work_2 {
+    position: relative;
+    top: -140px;
+    left: -55px;
+    width: 300px;
+    height: auto;
+}
+
+.pushpin_work_3 {
+    position: relative;
+    top: -1000px;
+    left: 950px;
+    width: 300px;
+    height: auto;
+}
+
+.ny_magazine_para {
+    font-size: 25px;
+    font-family: "Bree Serif", serif;
+    color: rgb(255, 255, 255);
+    position: relative;
+    text-align: left;
+    top: 1400px;
+    left: 880px;
+    line-height: 180%;
+}
+
+.ny_magazine_logo {
+    position: relative;
+    top: 900px;
+    left: 300px;
+    width: 500px;
+    height: auto;
+}
+
+.glaser_wbmg {
+    position: relative;
+    top: 1200px;
+    left: -200px;
+    width: 500px;
+    height: auto;
+}
+
+.milton_glaser_inc_para {
+    font-size: 25px;
+    font-family: "Bree Serif", serif;
+    color: rgb(255, 255, 255);
+    position: relative;
+    text-align: right;
+    top: 1400px;
+    left: -920px;
+    line-height: 180%;
+}
+
+.milton_glaser_inc {
+    position: relative;
+    top: 1050px;
+    left: 875px;
+    width: 300px;
+    height: auto;
+}
+
+.career-footer {
+    background-color: rgb(117, 65, 127);
+    color: rgb(255, 255, 255);
+    position: relative;
+    top: 1150px;
+    text-align: center;
+    position: relative;
+    width: 100%;
+
+    a:link {
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+    }
+
+    a:visited {
+        color: rgb(255, 255, 255);
+    }
+}
+
+/* achievements section */
+
+.achievements-body {
+    background-image: url('../images/bob_dylan.jpg');
+    background: linear-gradient(rgba(74, 73, 73, 0.5), rgba(74, 73, 73, 0.5)),
+        url('../images/bob_dylan.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: rgb(38, 132, 129);
+    background-size: 200%;
+    background-position: 60% 8%;
+}
+
+.achievements-title {
+    font-size: 150px;
+    font-family: "Bowlby One", serif;
+    text-align: center;
+    position: relative;
+    top: 100px;
+    color: white;
+    text-shadow:
+        10px 10px 0 rgb(0, 94, 52),
+        -10px 10px 0 rgb(0, 94, 52),
+        -10px -10px 0 rgb(0, 94, 52),
+        10px -10px 0 rgb(0, 94, 52);
+}
+
+.rectangle5 {
+    position: absolute;
+    top: 250px;
+    left: 130px;
+    width: 1500px;
+    height: 2200px;
+    background-color: rgb(0, 94, 52);
+    display: inline-block;
+    z-index: -1;
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.obama_para {
+    font-size: 25px;
+    font-family: "Bree Serif", serif;
+    color: rgb(255, 255, 255);
+    position: relative;
+    text-align: right;
+    top: 190px;
+    left: -100px;
+    line-height: 180%;
+}
+
+.glaser_medal {
+    position: relative;
+    top: 200px;
+    left: -20px;
+    width: 700px;
+    height: auto;
+}
+
+.moma_para {
+    font-size: 25px;
+    font-family: "Bree Serif", serif;
+    color: rgb(255, 255, 255);
+    position: relative;
+    text-align: left;
+    top: 560px;
+    left: 750px;
+    width: 600px;
+    line-height: 180%;
+}
+
+.moma_1 {
+    position: relative;
+    top: 50px;
+    left: -400px;
+    width: 600px;
+    height: auto;
+}
+
+.moma_2 {
+    position: relative;
+    top: -520px;
+    left: 100px;
+    width: 600px;
+    height: auto;
+}
+
+.milton_crossing_arms {
+    position: relative;
+    top: 150px;
+    left: -350px;
+    width: 800px;
+    height: auto;
+}
+
+.achievements-footer {
+    background-color: rgb(0, 94, 52);
+    color: rgb(255, 255, 255);
+    position: relative;
+    text-align: center;
+    position: relative;
+    top: 2200px;
+    width: 100%;
+
+    a:link {
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+    }
+
+    a:visited {
+        color: rgb(255, 255, 255);
+    }
+}
